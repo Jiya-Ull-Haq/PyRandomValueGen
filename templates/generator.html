@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Value Generator</title>
+    <link rel="stylesheet" href="../static/gen.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="../static/img/Dragonball-Goku.ico"/>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Home</a>
+    </div>
+</nav>
+
+<div class="login-box">
+    <h1>Enter Values</h1>
+    <form id="my_form" action="/result" method="post">
+        <div class="user-box">
+            <input type="text" id="entry" name="entry">
+            <label>Range Point A</label>
+        </div>
+        <div class="user-box">
+            <input type="text" id="end" name="end">
+            <label>Range Point B</label>
+        </div>
+        <div class="user-box">
+            <input type="text" id="Num" name="Num">
+            <label>N Number of Data</label>
+        </div>
+        <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">
+            Submit
+        </a>
+    </form>
+</div>
+
+<div class="result">
+
+    <h1>Result: </h1>
+    <hr>
+    <textarea cols="80" rows="10" id="aboutDescription">
+        {% for your_list_element in your_list %}
+            {{ your_list_element }}
+        {% endfor -%}
+    </textarea>
+    <button onclick="copy()">Copy To ClipBoard</button>
+    <hr>
+</div>
+
+
+</body>
+<script>
+
+
+    function copy() {
+        let textarea = document.getElementById("aboutDescription");
+        textarea.select();
+        document.execCommand("copy");
+    }
+</script>
+</html>
