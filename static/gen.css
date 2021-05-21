@@ -98,17 +98,18 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    height: 100%; /* Full-height: remove this if you want "auto" height */
+    height: 100%;
     width: 160px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     float: right;
     color: white;
     right: 0;
-    background-color: #111; /* Black */
+    background: black;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
 }
 
-.result h1 {
+.result h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
@@ -117,15 +118,8 @@ body {
 
 .textarea {
     overflow-y: scroll;
-    height: 700px;
     resize: none;
 }
 
-/*button{*/
-/*  width: 100px;*/
-/*   height: 25px;*/
-/*   border: none;*/
-/*   background: blue;*/
-/*   margin: 0;*/
-/*}*/
+
 

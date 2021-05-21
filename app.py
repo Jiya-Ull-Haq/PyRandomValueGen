@@ -1,7 +1,6 @@
 from flask import Flask, render_template
-from flask_restful import Resource, Api, reqparse, abort,request
+from flask_restful import Resource, Api, reqparse, abort, request
 import random
-
 
 app = Flask(__name__)
 api = Api(app)
@@ -20,9 +19,16 @@ def generate_values():
     print(your_list)
     return render_template('generator.html', your_list=your_list)
 
+
 @app.route('/Random-Generator')
-def generator():
+def value_generator():
     return render_template('generator.html')
+
+
+@app.route('/Time-Generator')
+def time_generator():
+    return render_template('time.html')
+
 
 @app.route('/')
 def main_app():
